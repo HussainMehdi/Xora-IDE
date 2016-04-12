@@ -1,0 +1,47 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:XORA_IDE" x:Class="XORA_IDE.EventBuilder"
+        Title="Events" Height="464" Width="698"  >
+
+    <Grid>
+
+        <TabControl x:Name="tabControl" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" Margin="0,0,0,45" >
+            <TabItem Header="Onclick">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox x:Name="listBox" SelectionMode="Extended" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Name="lang_img" Source="/XORA-IDE;component/Images/XORA_ICO.ico" Height="36" ></Image>
+                                    <TextBlock x:Name="txt_Prop" Text="Dummy Data" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                               
+
+
+
+
+                    </ListBox>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Create">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Destroy">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+
+        </TabControl>
+        <Button x:Name="button" Content="Add Action" HorizontalAlignment="Left" Margin="10,393,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,262 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:avalonDock="http://schemas.xceed.com/wpf/xaml/avalondock"
+         xmlns:local="clr-namespace:XORA_IDE"  xmlns:views="clr-namespace:XORA_IDE.Views"   
+    xmlns:swf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    x:Name="MainWindow1" x:Class="XORA_IDE.MainWindow"     
+        Title="Xora IDE" Height="768" Width="1024" Icon="/XORA-IDE;component/Images/XORA_ICO.ico">
+    <Grid>
+        <Menu Margin="2,8,401,12"  Background="White">
+            <MenuItem Header="_File">
+                <MenuItem Header="New" >
+                    <MenuItem Header="New Project  Ctrl+Shift+N"/>
+                    <MenuItem Header="Project From Existing Code"/>
+                    <MenuItem Header="File Ctr+N"/>
+                    <Separator/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Add" >
+
+                    <MenuItem Header="New Project" />
+                    <MenuItem Header="Existing Project" />
+                    <Separator/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Open" >
+
+                    <MenuItem Header="Project/Solution" />
+                    <Separator/>
+                    <MenuItem Header="Open From Source Control" />
+                    <Separator/>
+                    <MenuItem Header="New File"/>
+                    <MenuItem Header="Team Project"/>
+                    <MenuItem Header="File Ctrl+N"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Save Project" Click="MenuItem_SaveProject_Click" />
+                <MenuItem Header="Save Project As"/>
+                <MenuItem Header="Advanced Save Options"/>
+                <MenuItem Header="Save All"/>
+                <Separator/>
+
+                <MenuItem Header="Close"/>
+                <MenuItem Header="Close Solution"/>
+                <Separator/>
+                <MenuItem Header="Recent Projects"/>
+                <MenuItem Header="Recent Projects/Solutions"/>
+                <Separator/>
+                <MenuItem Header="Page Setup"/>
+                <MenuItem Header="Print"/>
+
+                <Separator/>
+                <MenuItem Header="Exit Alt+F4"/>
+                <Separator/>
+            </MenuItem>
+            <MenuItem Header="Build">
+                <MenuItem Header="Build Solution"/>
+                <MenuItem Header="Rebuild Solution"/>
+                <MenuItem Header="Clean Solution"/>
+                <MenuItem Header="Run Code Analysis on Solution"/>
+                <Separator/>
+                <MenuItem Header="w.r.t Platform/Build Android App" Click="BuildAndroid_Click"/>
+                <Separator/>
+                <MenuItem Header="Configuration Manager"/>
+                <MenuItem Header=" batch Build"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Undo  Ctrl+X"/>
+                <MenuItem Header="Redo Ctrl+X"/>
+                <MenuItem Header="Undo Last Global Action"/>
+                <MenuItem Header="Redo Last Global Action"/>
+                <Separator/>
+                <MenuItem Header="Cut" />
+                <MenuItem Header="Copy" />
+                <MenuItem Header="Paste" />
+                <MenuItem Header="Cycle Clipboard Ring" />
+                <MenuItem Header=" Find and Replace" >
+                    <MenuItem Header="Quick Find"/>
+                    <MenuItem Header="Quick Replace"/>
+                    <MenuItem Header="Find in Files"/>
+                    <MenuItem Header="Replace in Files"/>
+                    <Separator/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Tools">
+                <MenuItem Header="Save File as Template"/>
+                <Separator/>
+                <MenuItem Header="IDE Scripting Tools" />
+                <MenuItem Header="XORA" >
+                    <MenuItem Header="Navigation Editor"/>
+                    <MenuItem Header="Sync Project with Gradle Files"/>
+                    <MenuItem Header="XORA Virtual DM"/>
+                    <MenuItem Header="XORA SDK Manager"/>
+                    <MenuItem Header="Theme Editor"/>
+                    <MenuItem Header="XORA Virtual DM"/>
+                    <Separator/>
+                </MenuItem>
+
+            </MenuItem>
+            <MenuItem Header="Run">
+                <MenuItem Header="Run App"/>
+                <MenuItem Header="Debug App"/>
+                <MenuItem Header="Run App With Coverage"/>
+                <MenuItem Header="Debug"/>
+                <MenuItem Header="Edit Configurations"/>
+                <Separator/>
+                <MenuItem Header="Reload Changed Classes"/>
+                <MenuItem Header="Resume Programme"/>
+                <MenuItem Header="Attach Debuger to XORA Processes"/>
+                <Separator/>
+            </MenuItem>
+            <MenuItem Header="Windows">
+                <MenuItem Header="Store Current Layout as Default"/>
+                <MenuItem Header="Restore Default Layout"/>
+                <MenuItem Header="Active Tool Windows"/>
+                <MenuItem Header="Editor Tabs"/>
+                <MenuItem Header="Background Tasks"/>
+                <Separator/>
+                <MenuItem Header="Next Project Window"/>
+                <MenuItem Header="Previous Project Windows"/>
+                <MenuItem Header="Current App Name"/>
+                <Separator/>
+            </MenuItem>
+            <MenuItem Header="Code">
+                <MenuItem Header="Override Methods"/>
+                <MenuItem Header="Implement Methods"/>
+                <MenuItem Header="Delegate Methods"/>
+                <MenuItem Header="unwrap/remove"/>
+
+                <Separator/>
+
+
+                <MenuItem Header="Comment With Block"/>
+                <MenuItem Header="Comment With Line"/>
+
+                <MenuItem Header="Reformat Code"/>
+                <MenuItem Header="Auto Indent Lines"/>
+                <MenuItem Header="Optimize Imports"/>
+                <MenuItem Header="Rearrange Code"/>
+                <MenuItem Header="Move Statement Up Down"/>
+                <Separator/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="View Help"/>
+                <MenuItem Header="Check For Xora Updates"/>
+                <MenuItem Header="Tip of the day"/>
+                <MenuItem Header="Productivity Guide"/>
+                <MenuItem Header="Onnline Documentation"/>
+
+                <Separator/>
+                <MenuItem Header="What's New in Xora STudio"/>
+                <MenuItem Header="About"/>
+                <Separator/>
+            </MenuItem>
+            <MenuItem Header="Analyze">
+                <MenuItem Header="Inspect Code"/>
+                <MenuItem Header="Code Cleansup"/>
+                <MenuItem Header="Run Inspection by name"/>
+                <MenuItem Header="Configure Current FileAnalysis"/>
+                <MenuItem Header="View Offline Inspections"/>
+                <MenuItem Header="Analyze Dependencies"/>
+                <Separator/>
+                <MenuItem Header="Show Coverage data"/>
+                <MenuItem Header="Analyze Module Dependencies"/>
+                <Separator/>
+            </MenuItem>
+            <MenuItem Header="Debug">
+                <MenuItem Header="Windows" >
+                    <MenuItem Header="Break Points"/>
+                    <MenuItem Header="Exception Setting"/>
+                    <MenuItem Header="Output"/>
+                    <Separator/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Other Debug Targets" >
+                    <MenuItem Header="Debug Installed App Package"/>
+                    <MenuItem Header="Trigger Windows App Prefect "/>
+                    <MenuItem Header="Debug Universal App Prelaunch"/>
+                    <Separator/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Start Debugging" />
+                <Separator/>
+                <MenuItem Header="Start without Debugging"/>
+                <MenuItem Header="Start Diagnosting tool Without Debugging"/>
+                <MenuItem Header="Toggle Break Point"/>
+                <MenuItem Header="New Break Point"/>
+                <MenuItem Header="Delete All break points"/>
+                <Separator/>
+                <MenuItem Header="Properties"/>
+                <Separator/>
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="Code" >
+                    <MenuItem Header="Open"/>
+                    <MenuItem Header="Open With"/>
+                    <MenuItem Header="Output"/>
+                    <MenuItem Header="Designer"/>
+                    <Separator/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Solution Explorer">
+                </MenuItem>
+                <Separator/>
+
+                <MenuItem Header="Class view" />
+                <Separator/>
+                <MenuItem Header="Tool Box"/>
+                <MenuItem Header="Full Screen"/>
+                <MenuItem Header="Full Screen"/>
+                <MenuItem Header="Properties Windows"/>
+                <Separator/>
+            </MenuItem>
+            
+        </Menu>
+        <avalonDock:DockingManager x:Name="dockingManager" Margin="0,35,0,10" PreviewKeyDown="dockingManager_PreviewKeyDown">
+            <avalonDock:LayoutRoot>
+
+                <avalonDock:LayoutPanel Orientation="Horizontal">
+                    <avalonDock:LayoutAnchorablePane DockWidth="150" DockHeight="100">
+                        <avalonDock:LayoutAnchorable Title="Toolbox">
+                            <views:Toolbox x:Name="IDE_Toolbox"/>
+                        </avalonDock:LayoutAnchorable>
+                    </avalonDock:LayoutAnchorablePane>
+                    <avalonDock:LayoutDocumentPaneGroup>
+                        <avalonDock:LayoutDocumentPane >
+                            <avalonDock:LayoutDocument Title="Page1"  >
+                                <local:IDE_Page x:Name="Page_canvas"  HorizontalAlignment="Center" PreviewKeyDown="Page_canvas_PreviewKeyDown"  VerticalAlignment="Center"  Height="540" Width="469"/>
+                            </avalonDock:LayoutDocument>
+                        </avalonDock:LayoutDocumentPane>
+                    </avalonDock:LayoutDocumentPaneGroup>
+                    <avalonDock:LayoutAnchorablePaneGroup DockWidth="150" DockHeight="100" Orientation="Vertical">
+                        <avalonDock:LayoutAnchorablePane DockWidth="150">
+                            <avalonDock:LayoutAnchorable Title="Layers">
+                                <TextBox/>
+                            </avalonDock:LayoutAnchorable>
+                        </avalonDock:LayoutAnchorablePane>
+                        <avalonDock:LayoutAnchorablePaneGroup DockWidth="150" DockHeight="100" >
+                            <avalonDock:LayoutAnchorablePane DockWidth="150">
+                                <avalonDock:LayoutAnchorable Title=" Properties">
+                                    <WindowsFormsHost >
+                                        <swf:PropertyGrid x:Name="propertyGrid" PropertyValueChanged="PropertyGrid_Update"/>
+                                    </WindowsFormsHost>
+                                </avalonDock:LayoutAnchorable>
+                            </avalonDock:LayoutAnchorablePane>
+                        </avalonDock:LayoutAnchorablePaneGroup>
+                    </avalonDock:LayoutAnchorablePaneGroup>
+                </avalonDock:LayoutPanel>
+                <avalonDock:LayoutRoot.LeftSide>
+                    <avalonDock:LayoutAnchorSide>
+                        <avalonDock:LayoutAnchorGroup>
+                            <avalonDock:LayoutAnchorable Title="Autohidden Content">
+                                <TextBox/>
+                            </avalonDock:LayoutAnchorable>
+                        </avalonDock:LayoutAnchorGroup>
+                    </avalonDock:LayoutAnchorSide>
+                </avalonDock:LayoutRoot.LeftSide>
+            </avalonDock:LayoutRoot>
+        </avalonDock:DockingManager>
+    </Grid>
+</Window
+>

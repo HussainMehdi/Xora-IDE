@@ -1,0 +1,9 @@
+﻿<Window x:Class="XORA_IDE.EventBuilder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EventBuilder" Height="300" Width="300">
+    <Grid>
+        <DataGrid Name="EventsGrid" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="131" Width="137"/>
+
+    </Grid>
+</Window>

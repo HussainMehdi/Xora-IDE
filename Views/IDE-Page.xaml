@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="XORA_IDE.IDE_Page"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="548" Width="469" Loaded="Window_Loaded">
+    <Border x:Name="CanvasBorder" BorderBrush="Black">
+        <Canvas Name="myCanvas" 
+            PreviewKeyDown="myCanvas_PreviewKeyDown"
+            AllowDrop="True" Drop="Canvas_Drop"
+            DragEnter="myCanvas_DragEnter"
+            PreviewMouseLeftButtonUp="Preview_MouseLeftButtonUp"
+            DragLeave="Preview_Drag_LeaveUpdate"   
+           Background="White"/>
+    </Border>
+
+
+
+</UserControl>
