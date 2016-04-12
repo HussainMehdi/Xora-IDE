@@ -1,2 +1,0 @@
-
-D:\Documents\XORA-IDE\XORA-IDE\bin\Release>cordova build -d android 

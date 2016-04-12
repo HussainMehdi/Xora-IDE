@@ -1,8 +1,0 @@
-<IDE_Page Name="Page_canvas" Width="469" Height="540" HorizontalAlignment="Center" VerticalAlignment="Center" xmlns="clr-namespace:XORA_IDE;assembly=XORA-IDE" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-  <av:Border BorderThickness="0.4,0.4,0.4,0.4" BorderBrush="#FF000000" Name="CanvasBorder">
-    <av:Canvas Background="#FFFFFFFF" Name="myCanvas" AllowDrop="True">
-      <av:Button Name="btn_1" Width="80" Height="25" x:Uid="btn_1" av:Canvas.Left="121.12" av:Canvas.Top="97.1" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">Button</av:Button>
-      <av:TextBox Name="txtblk_1" Width="120" Height="25" x:Uid="txtblk_1" av:Canvas.Left="278.12" av:Canvas.Top="224.1" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">TextBlock</av:TextBox>
-    </av:Canvas>
-  </av:Border>
-</IDE_Page>
